@@ -1,0 +1,7 @@
+{
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "theme.osd.enable": true,
+  "bar.customModules.microphone.label": true
+}

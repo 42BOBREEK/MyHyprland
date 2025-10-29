@@ -1,0 +1,15 @@
+{
+
+  "notification-center": {
+    "enabled": false
+  },
+  "widgets": [
+    "notifications"
+  ],
+  "floating-notifications": {
+    "enabled": true,
+    "anchor": "top-right",
+    "max-visible": 5
+  }
+}
+

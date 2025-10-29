@@ -1,0 +1,35 @@
+/* Общие параметры уведомлений */
+.notification {
+    font-family: "Victor Mono", monospace; /* шрифт с меньшим верхним выступом */
+    font-size: 14px;                     /* чуть меньше, чем было */
+    line-height: 1.5;
+
+    background-color: rgba(20, 25, 30, 0.8);
+    border: 2px solid #40E0D0;
+    border-radius: 12px;
+
+    padding: 14px; /* поддерживаемый Gtk CSS */
+    margin: 8px;
+
+    color: #ffffff;
+}
+
+/* Заголовок уведомления */
+.notification .summary {
+    font-weight: bold;
+    color: #aeefff;
+}
+
+/* Текст уведомления */
+.notification .body {
+    color: #e0fafa;
+    margin-top: 8px; /* отступ между заголовком и текстом */
+    line-height: 1.5; /* межстрочный интервал */
+}
+
+/* При наведении – подсветка */
+.notification:hover {
+    background-color: rgba(30, 40, 50, 0.75);
+    border-color: #5ef5e0;
+}
+

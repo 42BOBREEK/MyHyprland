@@ -1,0 +1,6 @@
+keyboards = ["sonix-kd98"]  # укажи имя своей основной клавиатуры из hyprctl devices
+
+[[default_layouts]]
+0 = ["kitty"]
+1 = ["firefox", "org.telegram.desktop", "others..."]
+

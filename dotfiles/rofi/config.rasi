@@ -1,0 +1,10 @@
+configuration {
+    font: "JetBrains Mono 13"
+    kb-accept-entry: Return
+    kb-custom-1: KP_Enter
+}
+
+actions {
+    kb-custom-1: "accept-entry"
+}
+

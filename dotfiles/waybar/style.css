@@ -1,0 +1,144 @@
+@import "macchiato.css";
+
+/* Бар в стиле ночного океана — тон ближе к обоям */
+
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 18px;
+}
+/* Основной контейнер бара */
+window#waybar {
+  background-color: rgba(20, 45, 70, 0.9); /* тёмный морской синий с прозрачностью */
+  border-radius: 13px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+button {
+  box-shadow: inset 0 -3px transparent;
+  border: none;
+  border-radius: 0;
+}
+
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px #66ccff;
+}
+
+#pulseaudio:hover {
+  background-color: rgba(60, 120, 150, 0.6);
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background-color: transparent;
+  color: #66cfff; /* яркий бирюзовый акцент */
+}
+
+#workspaces button:hover {
+  background: rgba(51, 170, 255, 0.2);
+}
+
+#workspaces button.focused {
+  background-color: #33aaff;
+  color: #e8fbff;
+  box-shadow: inset 0 -3px #66ccff;
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+
+#mode {
+  background-color: #276b90;
+  box-shadow: inset 0 -3px #66ccff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio {
+  padding: 0 10px;
+}
+
+#pulseaudio {
+  color: #66ccff;
+}
+
+#network {
+  color: #33bfff;
+}
+
+#temperature {
+  color: #55dfff;
+}
+
+#battery {
+  color: #66e0ff;
+}
+
+#clock {
+  color: #aeefff;
+}
+
+#cpu {
+  color: #88e8ff;
+  padding-right: 8px;
+}
+
+#memory {
+  color: #66e5ff;
+  padding-left: 8px;
+}
+
+#window {
+  color: #cfefff;
+}
+
+.modules-right,
+.modules-left,
+.modules-center {
+  background-color: rgba(25, 55, 80, 0.85); /* чуть светлее, чтобы визуально “слиться” с баром */
+  border-radius: 15px;
+}
+.modules-right {
+  padding: 0 10px;
+}
+.modules-left {
+  padding: 0 20px;
+}
+.modules-center {
+  padding: 0 10px;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #33cfff;
+}
+
+@keyframes blink {
+  to {
+    color: #000000;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#pulseaudio.muted {
+  color: #77aad0;
+}
